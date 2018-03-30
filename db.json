@@ -1,0 +1,135 @@
+{
+    "goods": [
+      {
+        "id": 1,
+        "title": "北科學餐便當",
+        "src": "assets/images/NTUT.jpg",
+        "altText": "泰式皇族",
+        "priceText": "NT$ 80"
+      },
+      {
+        "id": 2,
+        "title": "皇族泰式料理",
+        "src": "assets/images/royal.jpg",
+        "altText": "皇族泰式料理",
+        "priceText": "NT$ 4.5 - NT$ 145"
+      },
+      {
+        "id": 3,
+        "title": "阜杭豆漿",
+        "src": "assets/images/fu-hang.jpg",
+        "altText": "阜杭豆漿",
+        "priceText": "NT$ 15 - NT$ 65"
+      },
+      {
+        "id": 4,
+        "title": "麥當勞",
+        "src": "assets/images/McDonald's.jpg",
+        "altText": "麥當勞",
+        "priceText": "NT$ ? - NT$ ?"
+      }
+    ],
+    "storeDetail": [
+      {
+        "id": 1,
+        "address": "臺北市中正區齊東街86號",
+        "phone": "02-22222222",
+        "cellPhone": "0999999999",
+        "deliveryPrice": "50",
+        "memo": "提供週一至週五之午餐\n訂餐時間：當日上午10: 00截止\n取餐時間：中午12: 00\n取餐地點：承曦藝廊 智慧實驗商店 取餐\n備註：若訂餐後未取餐，則未來僅提供至智慧實驗商店預付現金訂餐",
+        "goodType": []
+      },
+      {
+        "id": 2,
+        "address": "臺北市中正區齊東街86號",
+        "phone": "02-22222222",
+        "cellPhone": "0999999999",
+        "deliveryPrice": "50",
+        "memo": "提供週一至週五之午餐\n訂餐時間：當日上午10: 00截止\n取餐時間：中午12: 00\n取餐地點：承曦藝廊 智慧實驗商店 取餐\n備註：若訂餐後未取餐，則未來僅提供至智慧實驗商店預付現金訂餐",
+        "goodTypes": [
+          {
+            "id": 1,
+            "goodType": "鍋類",
+            "goods": [
+              {
+                "id": 1,
+                "itemName": "泡菜牛肉鍋",
+                "price": 120
+              },
+              {
+                "id": 2,
+                "itemName": "清燉牛肉鍋",
+                "price": 100
+              },
+              {
+                "id": 3,
+                "itemName": "酸辣海鮮鍋",
+                "price": 110
+              },
+              {
+                "id": 4,
+                "itemName": "麻辣牛肉鍋 ",
+                "price": 125
+              }
+            ]
+          },
+          {
+            "id": 2,
+            "goodType": "河粉",
+            "goods": [
+              {
+                "id": 1,
+                "itemName": "生牛肉河粉",
+                "price": 145
+              },
+              {
+                "id": 2,
+                "itemName": "酸辣海鮮河粉",
+                "price": 125
+              },
+              {
+                "id": 3,
+                "itemName": "泰式炒河粉",
+                "price": 130
+              }
+            ]
+          }
+        ]
+      },
+      {
+        "id": 3,
+        "address": "臺北市中正區齊東街86號",
+        "phone": "02-22222222",
+        "cellPhone": "0999999999",
+        "deliveryPrice": "50",
+        "memo": "提供週一至週五之午餐\n訂餐時間：當日上午10: 00截止\n取餐時間：中午12: 00\n取餐地點：承曦藝廊 智慧實驗商店 取餐\n備註：若訂餐後未取餐，則未來僅提供至智慧實驗商店預付現金訂餐",
+        "goodType": []
+      },
+      {
+        "id": 4,
+        "address": "臺北市中正區齊東街86號",
+        "phone": "02-22222222",
+        "cellPhone": "0999999999",
+        "deliveryPrice": "50",
+        "memo": "提供週一至週五之午餐\n訂餐時間：當日上午10: 00截止\n取餐時間：中午12: 00\n取餐地點：承曦藝廊 智慧實驗商店 取餐\n備註：若訂餐後未取餐，則未來僅提供至智慧實驗商店預付現金訂餐",
+        "goodType": []
+      }
+    ],
+    "posts": [
+      {
+        "id": 1,
+        "title": "json-server",
+        "author": "typicode"
+      }
+    ],
+    "comments": [
+      {
+        "id": 1,
+        "body": "some comment",
+        "postId": 1
+      }
+    ],
+    "profile": {
+      "name": "typicode"
+    }
+  }

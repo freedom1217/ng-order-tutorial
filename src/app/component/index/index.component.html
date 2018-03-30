@@ -1,0 +1,124 @@
+<div class="container">
+    <app-nav-bar></app-nav-bar>
+
+  <!-- content -->
+  <div class="row content">
+    <div class="col-2">
+      <ul class="list-group left-bar">
+        <li class="list-group-item text-center disabled">Menu</li>
+        <li class="list-group-item">
+          <a href="#all">全部</a>
+        </li>
+        <li class="list-group-item">
+          <a href="#latest">最新商品</a>
+        </li>
+        <li class="list-group-item">
+          <div class="btn-group dropright">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">麥當勞</a>
+            <div class="dropdown-menu">
+              <!-- Dropdown menu links -->
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#McDonalds-menu">菜單</a>
+                </li>
+                <li>
+                  <a href="#McDonalds-map">地圖</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="btn-group dropright">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">阜杭豆漿</a>
+            <div class="dropdown-menu">
+              <!-- Dropdown menu links -->
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#fu-hang-menu">菜單</a>
+                </li>
+                <li>
+                  <a href="#fu-hang-map">地圖</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="btn-group dropright">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">皇族泰式料理</a>
+            <div class="dropdown-menu">
+              <!-- Dropdown menu links -->
+              <ul class="list-unstyled">
+                <li>
+                  <a href="./royal.html">菜單</a>
+                </li>
+                <li>
+                  <a href="#royal-map">地圖</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="btn-group dropright">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">北科學餐</a>
+            <div class="dropdown-menu">
+              <!-- Dropdown menu links -->
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#NTUT-menu">菜單</a>
+                </li>
+                <li>
+                  <a href="#NTUT-map">地圖</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="col-10">
+
+      <div *ngFor="let store of stores" class="card d-inline-block" style="width: 16rem;">
+        <img class="card-img-top" [src]="store.src" alt="泰式皇族">
+        <div class="card-body">
+          <h5 class="card-title">{{store.title}}</h5>
+          <p class="card-text">{{store.priceText}}</p>
+          <a [routerLink]="['/page/royal/' + store.id]" class="btn btn-warning text-light float-right mb-3">訂購</a>
+        </div>
+      </div>
+
+      <!--修改寫死的資料-->
+      <!-- <div class="card d-inline-block" style="width: 16rem;">
+        <img class="card-img-top" src="assets/images/royal.jpg" alt="皇族泰式料理">
+        <div class="card-body">
+          <h5 class="card-title">皇族泰式料理</h5>
+          <p class="card-text">NT$ 4.5 - NT$ 145</p>
+          <a [routerLink]="['../royal']" class="btn btn-warning text-light float-right mb-3">訂購</a>
+        </div>
+      </div>
+      <div class="card d-inline-block" style="width: 16rem;">
+        <img class="card-img-top" src="assets/images/fu-hang.jpg" alt="阜杭豆漿">
+        <div class="card-body">
+          <h5 class="card-title">阜杭豆漿</h5>
+          <p class="card-text">NT$ 15 - NT$ 65</p>
+          <a href="#" class="btn btn-warning text-light float-right mb-3">訂購</a>
+        </div>
+      </div>
+      
+      <div class="card d-inline-block" style="width: 16rem;">
+        <img class="card-img-top" src="assets/images/McDonald's.jpg" alt="麥當勞">
+        <div class="card-body">
+          <h5 class="card-title">麥當勞</h5>
+          <p class="card-text">NT$ ? - NT$ ?</p>
+          <a href="#" class="btn btn-warning text-light float-right mb-3">訂購</a>
+        </div>
+      </div> -->
+
+
+    </div>
+  </div>
+  <!-- footer -->
+
+</div>

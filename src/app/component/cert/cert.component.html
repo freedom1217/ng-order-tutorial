@@ -1,0 +1,50 @@
+<div class="container">
+    <app-nav-bar></app-nav-bar>
+
+  <!-- content -->
+  <div class="content">
+    
+    <table class="table table-hover cart-table">
+      <tr>
+        <th>品名</th>
+        <th>單價</th>
+        <th>數量</th>
+        <th>小計</th>
+      </tr>
+      <tr *ngFor="let item of orderStore.getOrderList">
+        <td>{{item.itemName}}</td>
+        <td>{{item.price}}</td>
+        <td>
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <button class="btn btn-outline-secondary" type="button">-</button>
+            </div>
+            <input type="text" class="form-control text-center" placeholder="" aria-label="" aria-describedby="basic-addon1" value={{item.orderNum}}>
+            <div class="input-group-append">
+              <button class="btn btn-outline-secondary" type="button">+</button>
+            </div>
+          </div>
+        </td>
+        <td>{{item.total}}</td>
+      </tr>
+      <tr>
+        <td>總計:</td>
+        <td colspan="3" class="text-right">
+          <div class="input-group mb-3">
+            <div class="input-group-prepend">
+              <span class="input-group-text">NT$</span>
+            </div>
+            <input type="text" class="form-control text-right" aria-label="Amount (to the nearest dollar)" [value]="orderTotal" readonly>
+          </div>
+        </td>
+      </tr>
+      <tr>
+        <td colspan="4" class="text-right">
+          <input type="submit" class="btn btn-outline-warning" value="送出">
+        </td>
+      </tr>
+    </table>
+  </div>
+  <!-- footer -->
+
+</div>

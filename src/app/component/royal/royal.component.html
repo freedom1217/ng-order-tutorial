@@ -1,0 +1,242 @@
+<div class="container">
+    <app-nav-bar></app-nav-bar>
+
+  <!-- content -->
+  <div class="row content">
+    <div class="col-2">
+      <ul class="list-group left-bar">
+        <li class="list-group-item text-center disabled">Menu</li>
+        <li class="list-group-item">
+          <a href="#all">全部</a>
+        </li>
+        <li class="list-group-item">
+          <a href="#latest">最新商品</a>
+        </li>
+        <li class="list-group-item">
+          <div class="btn-group dropright">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">麥當勞</a>
+            <div class="dropdown-menu">
+              <!-- Dropdown menu links -->
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#McDonalds-menu">菜單</a>
+                </li>
+                <li>
+                  <a href="#McDonalds-map">地圖</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="btn-group dropright">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">阜杭豆漿</a>
+            <div class="dropdown-menu">
+              <!-- Dropdown menu links -->
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#fu-hang-menu">菜單</a>
+                </li>
+                <li>
+                  <a href="#fu-hang-map">地圖</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="btn-group dropright">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">皇族泰式料理</a>
+            <div class="dropdown-menu">
+              <!-- Dropdown menu links -->
+              <ul class="list-unstyled">
+                <li>
+                  <a href="./royal.html">菜單</a>
+                </li>
+                <li>
+                  <a href="#royal-map">地圖</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+        <li class="list-group-item">
+          <div class="btn-group dropright">
+            <a href="#" class="dropdown-toggle" data-toggle="dropdown">北科學餐</a>
+            <div class="dropdown-menu">
+              <!-- Dropdown menu links -->
+              <ul class="list-unstyled">
+                <li>
+                  <a href="#NTUT-menu">菜單</a>
+                </li>
+                <li>
+                  <a href="#NTUT-map">地圖</a>
+                </li>
+              </ul>
+            </div>
+          </div>
+        </li>
+      </ul>
+    </div>
+    <div class="col-10">
+      <div class="row">
+        <div class="col-4">
+          <img src="assets/images/royal.jpg" alt="皇族泰式料理" height="250">
+        </div>
+        <div class="col-8">
+          <table class="table table-hover">
+            <tr>
+              <th>住址</th>
+              <td>臺北市中正區齊東街86號</td>
+            </tr>
+            <tr>
+              <th>電話</th>
+              <td>02-22222222</td>
+            </tr>
+            <tr>
+              <th>手機</th>
+              <td>0999999999</td>
+            </tr>
+            <tr>
+              <th>外送金額</th>
+              <td>50</td>
+            </tr>
+            <tr>
+              <th>備註</th>
+              <td>
+                提供週一至週五之午餐
+                <br> 訂餐時間：當日上午10:00截止
+                <br> 取餐時間：中午12:00
+                <br> 取餐地點：承曦藝廊 智慧實驗商店 取餐
+                <br> 備註：若訂餐後未取餐，則未來僅提供至智慧實驗商店預付現金訂餐
+              </td>
+            </tr>
+          </table>
+        </div>
+      </div>
+      <table class="table" *ngIf="storeDetails"><!--如果沒值，則不要幫我random--><!--storeDetail-->
+        <ng-container *ngFor="let type of storeDetails.goodTypes"><!--type-->
+          <tr>
+            <th>{{type.goodType}}</th>
+          </tr>
+          <tr *ngFor="let good of type.goods"><!--good-->
+            <td class="pl-5">
+              <!--方法一-->
+                <!-- <a [routerLink]="['/page/order-detail/' + storeDetail.id + '/' + type.id + '/' + good.id]">
+                --><!--方法二-->
+              <a [routerLink]="['/page/order-detail',storeDetails.id,type.id,good.id]">
+                <div class="d-inline-block">{{good.itemName}}</div>
+                <div class="d-inline-block ml-5">{{good.price}}</div>
+              </a>
+            </td>
+          </tr>
+
+        </ng-container>
+
+
+        <!-- <tr>
+          <th>河粉</th>
+        </tr>
+        <tr>
+          <td class="pl-5">
+            <a href="#">
+              <div class="d-inline-block">生牛肉河粉</div>
+              <div class="d-inline-block ml-5">145</div>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td class="pl-5">
+            <a href="#">
+              <div class="d-inline-block">酸辣海鮮河粉</div>
+              <div class="d-inline-block ml-5">145</div>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td class="pl-5">
+            <a href="#">
+              <div class="d-inline-block">泰式炒河粉</div>
+              <div class="d-inline-block ml-5">145</div>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <th>點心</th>
+        </tr>
+        <tr>
+          <td class="pl-5">
+            <a href="#">
+              <div class="d-inline-block">摩摩喳喳</div>
+              <div class="d-inline-block ml-5">45</div>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td class="pl-5">
+            <a href="#">
+              <div class="d-inline-block">芋頭西米露</div>
+              <div class="d-inline-block ml-5">45</div>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td class="pl-5">
+            <a href="#">
+              <div class="d-inline-block">椰漿黑糯米</div>
+              <div class="d-inline-block ml-5">45</div>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td class="pl-5">
+            <a href="#">
+              <div class="d-inline-block">蝦片</div>
+              <div class="d-inline-block ml-5">100</div>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <th>飲料</th>
+        </tr>
+        <tr>
+          <td class="pl-5">
+            <a href="#">
+              <div class="d-inline-block">泰式奶茶</div>
+              <div class="d-inline-block ml-5">45</div>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <th>便當</th>
+        </tr>
+        <tr>
+          <td class="pl-5">
+            <a href="#">
+              <div class="d-inline-block">打拋豬便當</div>
+              <div class="d-inline-block ml-5">75</div>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td class="pl-5">
+            <a href="#">
+              <div class="d-inline-block">椰汁雞便當</div>
+              <div class="d-inline-block ml-5">100</div>
+            </a>
+          </td>
+        </tr>
+        <tr>
+          <td class="pl-5">
+            <a href="#">
+              <div class="d-inline-block">咖喱雞便當</div>
+              <div class="d-inline-block ml-5">100</div>
+            </a>
+          </td>
+        </tr> -->
+      </table>
+    </div>
+  </div>
+  <!-- footer -->
+
+</div>
